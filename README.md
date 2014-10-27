@@ -1,18 +1,10 @@
-# Mini CMS
+# LinkedOut
 
 You already know what a [Content Management System](http://en.wikipedia.org/wiki/Content_management_system) is. In this project we're going to build our own (very small) Content Management System. The content to be managed? Your own résumé.
 
-## Learning Goals
+Think of it like we're going to build a one-person [LinkedIn](https://www.linkedin.com/).
 
-The purpose of this project is develop a richer understanding of how web applications can manipulate data. Through the process of building a site that allows users to read data from and write data to a server, we will explore different kinds of HTTP requests, learn about synchronous vs. asynchronous requests, and use JavaScript to improve the UX (User Experience) of a site through improved client-side behavior.
-
-By the end of the project, we will:
-
-- Understand the difference between a `GET` and `POST` request
-- Be able to send data from a client (browser) to a server (running a Sinatra app)
-- Be able to use request data to create new records in a database
-- Understand how JavaScript can be used to manipulate the DOM
-- Be able to use jQuery to send asynchronous requests, listen for a response, and update the DOM
+If you want to know more about _why_ we are doing this, you can read the [Learning Goals](#learning-goals) section at the end of this document.
 
 ## Getting Started
 
@@ -78,3 +70,13 @@ The iterations after v1.0 are for more advanced work. If you are up for the chal
 ### [v1.3] Skills can have many users
 
 ## Finishing Up
+
+## Learning Goals
+
+The purpose of this project is develop a richer understanding of how web applications can manipulate data using asynchronous requests. Through the process of building a site that allows users to read data from and write data to a server, we will learn about synchronous vs. asynchronous requests and use JavaScript to improve the UX (User Experience) of a site through improved client-side behavior.
+
+By the end of the project, we will:
+
+- Be able to use jQuery to send asynchronous requests, listen for a response, and update the DOM
+- Be able to use request data to create new records in a database
+- Understand how JavaScript can be used to manipulate the DOM
