@@ -8,20 +8,17 @@ If you want to know more about _why_ we are doing this, you can read the [Learni
 
 ## Getting Started
 
-To get started, you'll need to
+You'll need SQLite3 to complete this project. If you haven't installed it already, read our [guide for installing SQLite3][sqlite3-install].
 
-- Fork this repository to your own GitHub account
-- Open a Terminal and clone this repository to your local computer
-- Navigate to the repository directory on your local computer
-- Open the repository directory with Sublime Text 3, Atom, or your editor of choice.
+Once you have SQLite3 working, you can set up your development environment with the following steps:
+
+1. Fork and clone this repository
+- Install the dependent gems: `bundle install --without production`
+- Create a `.env` file from the default `cp .env.example .env`
+- Seed the database with `bundle exec rake db:seed`
+- Run the server and restart when files change `bundle exec rerun -c rackup`
 
 ### Files In This Repository
-
-### Code Reviews and Feedback
-
-Remember, the absolute, tip-top, #1 priority is asking for and receiving feedback on your code. It's better to "fall short" of an iteration and ask for feedback on an incomplete version than it is to get stuck. It's better to ask for feedback on a hacked-together-but-working version than worry about whether it's "polished enough."
-
-Indeed, even if you know your code is unpolished or incomplete, you may as well ask for feedback so that we can be working on that feedback in parallel while you're polishing or completing your code. The worst that could possibly happen is that we give you feedback you are already aware of.
 
 ## Iterations
 
@@ -80,3 +77,5 @@ By the end of the project, we will:
 - Be able to use jQuery to send asynchronous requests, listen for a response, and update the DOM
 - Be able to use request data to create new records in a database
 - Understand how JavaScript can be used to manipulate the DOM
+
+[sqlite3-install]:https://github.com/codeunion/fundamentals-of-web-development/wiki/Resources-and-Tools#sqlite
