@@ -1,1 +1,30 @@
-Résumé show page
+<section class="profile">
+  <%= @user.name %><br>
+  <%= @user.bio %><br>
+  <%= @user.email %><br>
+  <%= @user.phone %><br>
+  <%= @user.website %>
+</section>
+
+<section class="jobs">
+  <h2>Jobs</h2>
+  <ul>
+  <% @jobs.each do |job| %>
+    <li>
+      <%= job.job_title %><br>
+      <%= job.job_description %><br>
+      <%= job.company_name %>
+    </li>
+  <% end %>
+  </ul>
+</section>
+
+<section class="skills">
+  <h2>Skills</h2>
+  <ul>
+  <% @skills.each do |skill| %>
+    <li><%= skill.name %></li>
+  <% end %>
+  </ul>
+</section>
+
