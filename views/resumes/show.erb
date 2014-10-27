@@ -1,9 +1,14 @@
+<h1>My Résumé</h1>
+
 <section class="profile">
-  <%= @user.name %><br>
-  <%= @user.bio %><br>
-  <%= @user.email %><br>
-  <%= @user.phone %><br>
-  <%= @user.website %>
+  <h2><%= @user.name %></h2>
+  <div class="contact-info">
+    <%= @user.email %>
+     | <%= @user.phone %>
+     | <%= @user.website %>
+  </div>
+
+  <p><%= @user.bio %></p>
 </section>
 
 <section class="jobs">
@@ -11,9 +16,8 @@
   <ul>
   <% @jobs.each do |job| %>
     <li>
-      <%= job.job_title %><br>
-      <%= job.job_description %><br>
-      <%= job.company_name %>
+      <h4><%= job.job_title %> at <%= job.company_name %></h4>
+      <p><%= job.job_description %></p>
     </li>
   <% end %>
   </ul>
