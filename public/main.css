@@ -1,0 +1,9 @@
+header {
+  min-width: 100%;
+  text-align: center;
+}
+
+.resume {
+  margin: 0 auto;
+  width: 720px;
+}
