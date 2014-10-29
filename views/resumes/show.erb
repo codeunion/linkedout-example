@@ -17,9 +17,7 @@
     <section class="skills one_third">
       <h2>Skills</h2>
       <ul class="no_bullets no_padding">
-      <% @skills.each do |skill| %>
-        <li><%= skill.name %></li>
-      <% end %>
+        <%= partial :'partials/skill', collection: @skills %>
       </ul>
     </section>
   </div>

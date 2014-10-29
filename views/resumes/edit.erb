@@ -17,19 +17,7 @@
     <section class="skills one_third">
       <h2>Skills</h2>
       <ul class="no_bullets no_padding">
-      <% @skills.each do |skill| %>
-        <li>
-          <form name="edit_skill" action="/skills/edit" method="post" accept-charset="utf-8" class="mini">
-            <input type="hidden" name="_method" value="put">
-
-            <input type="hidden" name="skill[id]" value="<%= skill.id %>">
-
-            <input type="text" name="skill[name]" value="<%= skill.name %>">
-
-            <input type="submit" value="Save">
-          </form>
-        </li>
-      <% end %>
+        <%= partial :'partials/skill_form', collection: @skills %>
       </ul>
     </section>
   </div>
