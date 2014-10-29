@@ -4,7 +4,7 @@
     <h3>Edit My Résumé</h3>
   </nav>
 
-  <%= partial :'partials/profile_form' %>
+  <%= partial :'partials/profile_form', :locals => { :user => default_user } %>
 
   <div class="row">
     <section class="jobs two_thirds">

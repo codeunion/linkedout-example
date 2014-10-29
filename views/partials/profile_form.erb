@@ -3,23 +3,23 @@
     <input type="hidden" name="_method" value="put">
 
     <label for="user[name]">Name</label>
-    <input type="text" name="user[name]" value="<%= default_user.name %>">
+    <input type="text" name="user[name]" value="<%= user.name %>">
     <br>
 
     <label for="user[email]">Email</label>
-    <input type="email" name="user[email]" value="<%= default_user.email %>">
+    <input type="email" name="user[email]" value="<%= user.email %>">
     <br>
 
     <label for="user[phone]">Phone</label>
-    <input type="phone" name="user[phone]" value="<%= default_user.phone %>">
+    <input type="phone" name="user[phone]" value="<%= user.phone %>">
     <br>
 
     <label for="user[website]">Website</label>
-    <input type="url" name="user[website]" value="<%= default_user.website %>">
+    <input type="url" name="user[website]" value="<%= user.website %>">
     <br>
 
     <label for="user[bio]">Bio</label>
-    <textarea name="user[bio]"><%= default_user.bio %></textarea>
+    <textarea name="user[bio]"><%= user.bio %></textarea>
     <br>
 
     <input type="submit" value="Update profile">
