@@ -15,3 +15,15 @@ get "/" do
 
   erb :'resumes/show'
 end
+
+get "/resumes/edit" do
+  erb :'resumes/edit'
+end
+
+put "/users/edit" do
+  user_attrs = params[:user]
+
+  default_user.update(user_attrs)
+
+  redirect "/"
+end
