@@ -25,7 +25,7 @@
       <textarea name="user[bio]"><%= default_user.bio %></textarea>
       <br>
 
-      <input type="submit" value="Update user">
+      <input type="submit" value="Update profile">
     </form>
   </section>
 
@@ -44,11 +44,11 @@
             <input type="text" name="job[company_name]" value="<%= job.company_name %>">
             <br>
 
-            <label for="job[job_description]">Job Description</label>
+            <label for="job[job_description]">Job Description</label><br>
             <textarea name="job[job_description]"><%= job.job_description %></textarea>
             <br>
 
-            <input type="submit" value="Update job">
+            <input type="submit" value="Save">
           </form>
         </li>
       <% end %>
@@ -66,9 +66,8 @@
             <input type="hidden" name="skill[id]" value="<%= skill.id %>">
 
             <input type="text" name="skill[name]" value="<%= skill.name %>">
-            <br>
 
-            <input type="submit" value="Update skill">
+            <input type="submit" value="Save">
           </form>
         </li>
       <% end %>

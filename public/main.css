@@ -29,7 +29,6 @@ header h1 {
 
 /* Profile section */
 .profile { margin-bottom: 3em; }
-
 .profile p { font-size: 1.5em; }
 
 /* Professional info section (wraps jobs and skills) */
@@ -72,3 +71,27 @@ header h1 {
   margin-bottom: 1em;
   background-color: #ccc;
 }
+
+/* General form styling */
+textarea {
+  width: 360px;
+  height: 48px;
+}
+
+/* Profile form styling */
+.profile form label {
+  display: inline-block;
+  min-width: 120px;
+  vertical-align: top;
+}
+
+.profile form input { margin-bottom: 5px; }
+
+.profile form input[type="submit"] {
+  margin-left: 124px;
+  padding: 5px;
+}
+
+/* Skills form styling */
+.skills form input[type="text"] { max-width: 160px; }
+.skills form input[type="submit"] { float: right; }
