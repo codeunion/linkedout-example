@@ -51,6 +51,16 @@ put "/jobs/edit" do
   redirect "/"
 end
 
+post "/skills" do
+  skill_attrs = params[:skill]
+  skill_attrs.merge!({ :user => default_user })
+
+  skill = Skill.new(skill_attrs)
+  skill.save
+
+  redirect "/"
+end
+
 put "/skills/edit" do
   skill_attrs = params[:skill]
 

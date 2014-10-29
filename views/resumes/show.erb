@@ -18,6 +18,14 @@
       <h2>Skills</h2>
       <ul class="no_bullets no_padding">
         <%= partial :'partials/skill', collection: @skills %>
+
+        <li>
+          <form name="new_skill" action="/skills" method="post" accept-charset="utf-8" class="mini">
+            <input type="text" name="skill[name]" placeholder="add a skill">
+
+            <input type="submit" value="Save">
+          </form>
+        </li>
       </ul>
     </section>
   </div>
