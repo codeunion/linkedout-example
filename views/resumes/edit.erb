@@ -31,7 +31,6 @@
 
   <section class="jobs">
     <h2>Jobs</h2>
-
     <ul>
     <% @jobs.each do |job| %>
       <li>
@@ -49,6 +48,26 @@
           <br>
 
           <input type="submit" value="Update job">
+        </form>
+      </li>
+    <% end %>
+    </ul>
+  </section>
+
+  <section class="skills">
+    <h2>Skills</h2>
+    <ul>
+    <% @skills.each do |skill| %>
+      <li>
+        <form name="edit_skill" action="/skills/edit" method="post" accept-charset="utf-8">
+          <input type="hidden" name="_method" value="put">
+
+          <input type="hidden" name="skill[id]" value="<%= skill.id %>">
+
+          <input type="text" name="skill[name]" value="<%= skill.name %>">
+          <br>
+
+          <input type="submit" value="Update skill">
         </form>
       </li>
     <% end %>
