@@ -1,9 +1,74 @@
 header {
   min-width: 100%;
   text-align: center;
+  background-color: #555;
+  color: #fff;
+  padding: 0.5em;
 }
 
+header h1 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+/* Résumé page content is centered and has a default width */
 .resume {
   margin: 0 auto;
   width: 720px;
+}
+
+/* The page header is separated from the main content with a border */
+.page_header {
+  padding-bottom: 0.25em;
+  border-bottom: 1px solid;
+}
+
+.page_header a {
+  float: right;
+}
+
+/* Profile section */
+.profile { margin-bottom: 3em; }
+
+.profile p { font-size: 1.5em; }
+
+/* Professional info section (wraps jobs and skills) */
+.professional_info {
+  display: block;
+  clear: both;
+}
+
+.professional_info:after {
+  display: block;
+  content: "";
+  line-height: 0;
+  clear: both;
+}
+
+/* Cancel extra whitespace and list markers in job and skill lists */
+.jobs ul, .skills ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+/* Jobs section takes up 2/3rds of page (720 * 2/3 - margin) */
+.jobs {
+  float: left;
+  width: 460px;
+  margin-right: 20px;
+}
+
+.jobs li { margin-bottom: 2.5em; }
+.jobs li h4 { margin-bottom: 0; }
+
+/* Skills section takes up 1/3rd of page */
+.skills {
+  float: left;
+  width: 240px;
+}
+
+.skills li {
+  padding: 0.25em;
+  margin-bottom: 1em;
+  background-color: #ccc;
 }
