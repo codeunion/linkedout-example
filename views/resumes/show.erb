@@ -4,18 +4,13 @@
     <h3>My Résumé</h3>
   </nav>
 
-  <%= partial :'partials/profile_show' %>
+  <%= partial :'partials/profile' %>
 
   <div class="row">
     <section class="jobs two_thirds">
       <h2>Jobs</h2>
       <ul class="no_bullets no_padding">
-      <% @jobs.each do |job| %>
-        <li>
-          <h4><%= job.job_title %> at <%= job.company_name %></h4>
-          <p><%= job.job_description %></p>
-        </li>
-      <% end %>
+        <%= partial :'partials/job', collection: @jobs %>
       </ul>
     </section>
 
