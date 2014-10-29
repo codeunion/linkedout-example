@@ -4,16 +4,7 @@
     <h3>My Résumé</h3>
   </nav>
 
-  <section class="profile highlight">
-    <h1><%= default_user.name %></h1>
-    <div class="contact-info">
-      <%= default_user.email %>
-       | <%= default_user.phone %>
-       | <a href="<%= default_user.website %>"><%= default_user.website %></a>
-    </div>
-
-    <p><%= default_user.bio %></p>
-  </section>
+  <%= erb :'partials/profile_show' %>
 
   <div class="row">
     <section class="jobs two_thirds">
