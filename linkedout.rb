@@ -40,6 +40,16 @@ put "/users/edit" do
   redirect "/"
 end
 
+post "/jobs" do
+  job_attrs = params[:job]
+  job_attrs.merge!({ :user => default_user })
+
+  job = Job.new(job_attrs)
+  job.save
+
+  redirect "/"
+end
+
 put "/jobs/edit" do
   job_attrs = params[:job]
 
