@@ -1,10 +1,10 @@
-<div class="resume">
-  <div class="page_header">
+<div class="page">
+  <nav>
     <a href="/resumes/edit" title="Edit resume">Edit</a>
     <h3>My Résumé</h3>
-  </div>
+  </nav>
 
-  <section class="profile">
+  <section class="profile highlight">
     <h1><%= default_user.name %></h1>
     <div class="contact-info">
       <%= default_user.email %>
@@ -15,10 +15,10 @@
     <p><%= default_user.bio %></p>
   </section>
 
-  <div class="professional_info">
-    <section class="jobs">
+  <div class="row">
+    <section class="jobs two_thirds">
       <h2>Jobs</h2>
-      <ul>
+      <ul class="no_bullets no_padding">
       <% @jobs.each do |job| %>
         <li>
           <h4><%= job.job_title %> at <%= job.company_name %></h4>
@@ -28,9 +28,9 @@
       </ul>
     </section>
 
-    <section class="skills">
+    <section class="skills one_third">
       <h2>Skills</h2>
-      <ul>
+      <ul class="no_bullets no_padding">
       <% @skills.each do |skill| %>
         <li><%= skill.name %></li>
       <% end %>

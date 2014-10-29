@@ -1,8 +1,11 @@
-<div class="resume">
-  <h3>Edit My Résumé</h3>
+<div class="page">
+  <nav>
+    <a href="/" title="View resume">View</a>
+    <h3>Edit My Résumé</h3>
+  </nav>
 
   <section class="profile">
-    <form name="edit_user" action="/users/edit" method="post" accept-charset="utf-8">
+    <form name="edit_user" action="/users/edit" method="post" accept-charset="utf-8" class="vertical">
       <input type="hidden" name="_method" value="put">
 
       <label for="user[name]">Name</label>
@@ -29,10 +32,10 @@
     </form>
   </section>
 
-  <div class="professional_info">
-    <section class="jobs">
+  <div class="row">
+    <section class="jobs two_thirds">
       <h2>Jobs</h2>
-      <ul>
+      <ul class="no_bullets no_padding">
       <% @jobs.each do |job| %>
         <li>
           <form name="edit_job" action="/jobs/edit" method="post" accept-charset="utf-8">
@@ -55,12 +58,12 @@
       </ul>
     </section>
 
-    <section class="skills">
+    <section class="skills one_third">
       <h2>Skills</h2>
-      <ul>
+      <ul class="no_bullets no_padding">
       <% @skills.each do |skill| %>
         <li>
-          <form name="edit_skill" action="/skills/edit" method="post" accept-charset="utf-8">
+          <form name="edit_skill" action="/skills/edit" method="post" accept-charset="utf-8" class="mini">
             <input type="hidden" name="_method" value="put">
 
             <input type="hidden" name="skill[id]" value="<%= skill.id %>">
