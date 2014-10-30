@@ -22,17 +22,17 @@ Once you have SQLite3 working, you can set up your development environment with 
 
 ## Releases
 
-We've inherited a project that has already been worked on. It is up to v0.8, which contains the following features:
+We've inherited a project that has already been worked on. It is up to release 0.8.0, which contains the following features:
 
 - A user can view a résumé show page
 - A user can edit the contents of a résumé via separate edit pages
 - A user can add **skills** and **jobs** via forms on the résumé show page
 
-Now it is up to us to add extra features to this project. Our goal for v1.0 is to provide users with a one-page application where they can view their own résumé and add jobs and skills as needed.
+Now it is up to us to add extra features to this project. Our goal for release 1.0.0 is to provide users with a one-page application where they can view their own résumé and add jobs and skills as needed.
 
-The _releases after v1.0 are for more advanced work_. If you are up for the challenge, go for it!
+The _releases after 1.0.0 are for more advanced work_. If you are up for the challenge, go for it!
 
-### [v0.9] Create new skills asynchronously
+### Release 0.9.0: Create new skills asynchronously
 
 Requirements:
 
@@ -48,7 +48,7 @@ Resources:
 
 - Using a partial as response data
 
-### [v1.0] Create jobs asynchronously
+### Release 1.0.0: Create jobs asynchronously
 
 Requirements:
 
@@ -61,13 +61,13 @@ Resources:
 - Sending form data in an AJAX request [TODO: Needs writeup in wiki]
 - Reading and serializing data from a form in jQuery: [jQuery's `.serialize()` function][jquery-api-serialize]
 
-### [v1.1] Improve the CSS
+### Release 1.1.0: Improve the CSS
 
 _Everything from this release forward is optional: continue at your own risk/pleasure._
 
 This website is not so good-looking. Make it more good-looking with CSS. You'll need to know a little bit about the [fundamentals of User Interface design](http://blog.teamtreehouse.com/10-user-interface-design-fundamentals).
 
-### [v1.2] Edit and delete skills and jobs
+### Release 1.2.0: Edit and delete skills and jobs
 
 Requirements:
 
@@ -77,14 +77,14 @@ Requirements:
 - [ ] A user can delete jobs from the résumé show page
 - [ ] All editing and deleting of skills and jobs does not require a page refresh
 
-### [v1.3] Support multiple users
+### Release 1.3.0: Support multiple users
 
 Requirements:
 
 - [ ] Multiple users can create their own résumés
 - [ ] Resumes can be viewed at [friendly URLs](http://en.wikipedia.org/wiki/Semantic_URL), e.g. `/resumes/jane-smith`
 
-### [v1.4] Filter by skill
+### Release 1.4.0: Filter by skill
 
 Requirements:
 
