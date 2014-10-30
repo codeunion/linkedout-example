@@ -62,13 +62,13 @@ put "/jobs/edit" do
 end
 
 post "/skills" do
-  skill_attrs = params[:skill]
-  skill_attrs.merge!({ :user => default_user })
+  skill_name = params[:skill_name]
 
-  skill = Skill.new(skill_attrs)
+  skill = Skill.new({ :name => skill_name, :user => default_user })
   skill.save
 
-  redirect "/"
+  # respond with an HTML partial for just this skill
+  partial :'partials/skill', :locals => { :skill => skill }
 end
 
 put "/skills/edit" do
