@@ -4,10 +4,10 @@
 
   <!-- Use normalize.css for cross-browser consistency
        http://necolas.github.io/normalize.css/ -->
-  <link rel="stylesheet" href="/normalize.css">
+  <link rel="stylesheet" href="/css/normalize.css">
 
   <!-- Load main stylesheet -->
-  <link rel="stylesheet" href="/main.css">
+  <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
   <header>
@@ -17,5 +17,10 @@
 
   <%= yield %>
 
+  <!-- Load jQuery version 1.11.1 (uncompressed) -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.js"></script>
+
+  <!-- Load own scripts -->
+  <script type="text/javascript" src="/js/main.js"></script>
 </body>
 <html>

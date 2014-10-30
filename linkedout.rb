@@ -47,7 +47,11 @@ post "/jobs" do
   job = Job.new(job_attrs)
   job.save
 
-  redirect "/"
+  if request.xhr?
+    partial :'partials/job', :locals => { :job => job }
+  else
+    redirect "/"
+  end
 end
 
 put "/jobs/edit" do
@@ -68,7 +72,11 @@ post "/skills" do
   skill = Skill.new(skill_attrs)
   skill.save
 
-  redirect "/"
+  if request.xhr? # this will return true when handling an AJAX request
+    partial :'partials/skill', :locals => { :skill => skill }
+  else
+    redirect "/"
+  end
 end
 
 put "/skills/edit" do
