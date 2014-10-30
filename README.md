@@ -20,6 +20,30 @@ Once you have SQLite3 working, you can set up your development environment with 
 
 ### Files In This Repository
 
+```sh
+├── .env.example # a sample .env file for setting environment variables
+├── .gitignore # list of files to be ignored by git
+├── CODE_OF_CONDUCT.md # standards of relating between contributors
+├── CONTRIBUTING.md # how to contribute
+├── Gemfile # list of gems that this project uses
+├── Gemfile.lock # a "locked" version of the Gemfile, which includes version numbers for all the gems
+├── LICENSE.md # license for project material
+├── README.md # you are here. ;D
+├── Rakefile # a place to store one-off commands (like seeding the database)
+├── config # put configuration scripts in this folder
+│   └── dotenv.rb # like this one! for the dotenv gem
+├── config.ru # this tells our web server how to run
+├── linkedout.rb # the most important file! this is the heart of our Sinatra web app, where we define how to respond to requests from across the web
+├── models.rb # where we define the data models for the app, using an ORM like DataMapper
+├── public # a folder to hold "static assets" like CSS files, images, and JavaScript files
+│   ├── main.css # our custom CSS
+│   └── normalize.css # a commonly used CSS library to aid in cross-browser compatibility
+└── views # a folder to hold the HTML templates for our pages
+    ├── layout.erb # this is the main template for our site
+    └── resumes # a sub-folder, to hold specific templates related to résumés
+        └── show.erb # the template for the résumé show page
+```
+
 ## Releases
 
 We've inherited a project that has already been worked on. It is up to release 0.8.0, which contains the following features:

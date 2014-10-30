@@ -1,0 +1,37 @@
+<div class="resume">
+  <h3>My Résumé</h3>
+
+  <section class="profile">
+    <h1><%= default_user.name %></h1>
+    <div class="contact-info">
+      <%= default_user.email %>
+       | <%= default_user.phone %>
+       | <%= default_user.website %>
+    </div>
+
+    <p><%= default_user.bio %></p>
+
+    <a href="/edit" title=""></a>
+  </section>
+
+  <section class="jobs">
+    <h2>Jobs</h2>
+    <ul>
+    <% @jobs.each do |job| %>
+      <li>
+        <h4><%= job.job_title %> at <%= job.company_name %></h4>
+        <p><%= job.job_description %></p>
+      </li>
+    <% end %>
+    </ul>
+  </section>
+
+  <section class="skills">
+    <h2>Skills</h2>
+    <ul>
+    <% @skills.each do |skill| %>
+      <li><%= skill.name %></li>
+    <% end %>
+    </ul>
+  </section>
+</div>
