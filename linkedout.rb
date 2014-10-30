@@ -62,13 +62,17 @@ put "/jobs/edit" do
 end
 
 post "/skills" do
-  skill_name = params[:skill_name]
+  skill_attrs = params[:skill]
+  skill_attrs.merge!({ :user => default_user })
 
-  skill = Skill.new({ :name => skill_name, :user => default_user })
+  skill = Skill.new(skill_attrs)
   skill.save
 
-  # respond with an HTML partial for just this skill
-  partial :'partials/skill', :locals => { :skill => skill }
+  if request.xhr? # this will return true when handling an AJAX request
+    partial :'partials/skill', :locals => { :skill => skill }
+  else
+    redirect "/"
+  end
 end
 
 put "/skills/edit" do

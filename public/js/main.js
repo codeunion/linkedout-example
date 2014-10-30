@@ -12,14 +12,9 @@ $(document).ready(function() {
     // Instead, we'll handle the request with AJAX
     evt.preventDefault();
 
-    // Grab the new skill name from the form, since this is
-    // the data we want to send to the server
-    var newSkillName = $newSkillForm.find('input[name="skill[name]"]')
-                                    .val();
-
-    // Then put it into a JavaScript object so that we can send
-    // it to the server (where it will be parsed into a Ruby hash)
-    var newSkillData = { "skill_name": newSkillName };
+    // Grab the form data and serialize it as a string in
+    // standard URL-encoded notation
+    var newSkillData = $(this).serialize();
 
     // Send a POST request asynchronously to the "/skills"
     // route on the server, passing the serialized form data
