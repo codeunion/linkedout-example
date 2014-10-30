@@ -47,7 +47,11 @@ post "/jobs" do
   job = Job.new(job_attrs)
   job.save
 
-  redirect "/"
+  if request.xhr?
+    partial :'partials/job', :locals => { :job => job }
+  else
+    redirect "/"
+  end
 end
 
 put "/jobs/edit" do
