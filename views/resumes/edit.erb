@@ -1,76 +1,24 @@
-<div class="resume">
-  <h3>Edit My Résumé</h3>
+<div class="page">
+  <nav>
+    <a href="/" title="View resume">View</a>
+    <h3>Edit My Résumé</h3>
+  </nav>
 
-  <section class="profile">
-    <form name="edit_user" action="/users/edit" method="post" accept-charset="utf-8">
-      <input type="hidden" name="_method" value="put">
+  <%= partial :'partials/profile_form', :locals => { :user => default_user } %>
 
-      <label for="user[name]">Name</label>
-      <input type="text" name="user[name]" value="<%= default_user.name %>">
-      <br>
+  <div class="row">
+    <section class="jobs two_thirds">
+      <h2>Jobs</h2>
+      <ul class="no_bullets no_padding">
+        <%= partial :'partials/job_form', collection: @jobs %>
+      </ul>
+    </section>
 
-      <label for="user[email]">Email</label>
-      <input type="email" name="user[email]" value="<%= default_user.email %>">
-      <br>
-
-      <label for="user[phone]">Phone</label>
-      <input type="phone" name="user[phone]" value="<%= default_user.phone %>">
-      <br>
-
-      <label for="user[website]">Website</label>
-      <input type="url" name="user[website]" value="<%= default_user.website %>">
-      <br>
-
-      <label for="user[bio]">Bio</label>
-      <textarea name="user[bio]"><%= default_user.bio %></textarea>
-      <br>
-
-      <input type="submit" value="Update user">
-    </form>
-  </section>
-
-  <section class="jobs">
-    <h2>Jobs</h2>
-    <ul>
-    <% @jobs.each do |job| %>
-      <li>
-        <form name="edit_job" action="/jobs/edit" method="post" accept-charset="utf-8">
-          <input type="hidden" name="_method" value="put">
-
-          <input type="hidden" name="job[id]" value="<%= job.id %>">
-
-          <input type="text" name="job[job_title]" value="<%= job.job_title %>"> at
-          <input type="text" name="job[company_name]" value="<%= job.company_name %>">
-          <br>
-
-          <label for="job[job_description]">Job Description</label>
-          <textarea name="job[job_description]"><%= job.job_description %></textarea>
-          <br>
-
-          <input type="submit" value="Update job">
-        </form>
-      </li>
-    <% end %>
-    </ul>
-  </section>
-
-  <section class="skills">
-    <h2>Skills</h2>
-    <ul>
-    <% @skills.each do |skill| %>
-      <li>
-        <form name="edit_skill" action="/skills/edit" method="post" accept-charset="utf-8">
-          <input type="hidden" name="_method" value="put">
-
-          <input type="hidden" name="skill[id]" value="<%= skill.id %>">
-
-          <input type="text" name="skill[name]" value="<%= skill.name %>">
-          <br>
-
-          <input type="submit" value="Update skill">
-        </form>
-      </li>
-    <% end %>
-    </ul>
-  </section>
+    <section class="skills one_third">
+      <h2>Skills</h2>
+      <ul class="no_bullets no_padding">
+        <%= partial :'partials/skill_form', collection: @skills %>
+      </ul>
+    </section>
+  </div>
 </div>

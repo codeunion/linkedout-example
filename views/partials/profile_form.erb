@@ -1,0 +1,27 @@
+<section class="profile">
+  <form name="edit_user" action="/users/edit" method="post" accept-charset="utf-8" class="vertical">
+    <input type="hidden" name="_method" value="put">
+
+    <label for="user[name]">Name</label>
+    <input type="text" name="user[name]" value="<%= user.name %>">
+    <br>
+
+    <label for="user[email]">Email</label>
+    <input type="email" name="user[email]" value="<%= user.email %>">
+    <br>
+
+    <label for="user[phone]">Phone</label>
+    <input type="phone" name="user[phone]" value="<%= user.phone %>">
+    <br>
+
+    <label for="user[website]">Website</label>
+    <input type="url" name="user[website]" value="<%= user.website %>">
+    <br>
+
+    <label for="user[bio]">Bio</label>
+    <textarea name="user[bio]"><%= user.bio %></textarea>
+    <br>
+
+    <input type="submit" value="Update profile">
+  </form>
+</section>

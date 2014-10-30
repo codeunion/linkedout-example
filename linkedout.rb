@@ -1,8 +1,11 @@
 require 'sinatra'
+require 'sinatra/partial'
 require 'better_errors'
 
 require_relative 'config/dotenv'
 require_relative 'models'
+
+set :partial_template_engine, :erb
 
 configure :development do
   use BetterErrors::Middleware
