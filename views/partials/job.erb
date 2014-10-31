@@ -1,4 +1,9 @@
 <li>
+  <form name="delete_job" action="/jobs" method="post" accept-charset="utf-8" class="float_right">
+    <input type="hidden" name="_method" value="delete">
+    <input type="hidden" name="job[id]" value="<%= job.id %>">
+    <input type="submit" value="Delete">
+  </form>
   <h4><%= job.job_title %> at <%= job.company_name %></h4>
   <p><%= job.job_description %></p>
 </li>

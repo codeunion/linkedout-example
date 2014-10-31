@@ -65,6 +65,17 @@ put "/jobs/edit" do
   redirect "/"
 end
 
+delete "/jobs" do
+  job_attrs = params[:job]
+
+  job_id = job_attrs.delete("id")
+
+  job = Job.get(job_id)
+  job.destroy
+
+  redirect "/"
+end
+
 post "/skills" do
   skill_attrs = params[:skill]
   skill_attrs.merge!({ :user => default_user })

@@ -97,7 +97,7 @@ This is the first release with JavaScript and jQuery included. As a reference, h
 ### v[1.2.0] Asynchronously edit and delete jobs
 
 - [ ] User can edit jobs on the résumé show page
-- [ ] User can delete jobs on the résumé show page
+- [X] User can delete jobs on the résumé show page
 - [ ] Editing and deleting jobs occurs asynchronously
 - [ ] Edited jobs are updated on the page without refresh
 - [ ] Deleted jobs are removed from the page without refresh
