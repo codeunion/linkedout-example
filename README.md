@@ -1,10 +1,6 @@
 # LinkedOut
 
-You already know what a [Content Management System](http://en.wikipedia.org/wiki/Content_management_system) is. In this project we're going to build our own (very small) Content Management System. The content to be managed? Your own résumé.
-
-Think of it like we're going to build a one-person [LinkedIn](https://www.linkedin.com/). That being said, you will be able to build more interesting, multi-user features after you've built an MVP.
-
-If you want to know more about _why_ we are doing this, you can read the [Learning Goals](#learning-goals) section at the end of this document.
+A one-person [LinkedIn](https://www.linkedin.com/). That being said, you will be able to build more interesting, multi-user features after you've built an MVP.
 
 ## Getting Started
 
@@ -46,43 +42,51 @@ Once you have SQLite3 working, you can set up your development environment with 
 
 ## Releases
 
-We've inherited a project that has already been worked on. It is up to release 0.8.0, which contains the following features:
+_Note: there are other, smaller [releases][gh-help-releases] within this repository. The releases listed here correspond to significant changes to the application's features. Each of the releases here is represented by a corresponding [pull request][gh-help-pull-requests]._
 
-- A user can view a résumé show page
-- A user can edit the contents of a résumé via separate edit pages
-- A user can add **skills** and **jobs** via forms on the résumé show page
+### v[0.4.0]
 
-Now it is up to us to add extra features to this project. Our goal for release 1.0.0 is to provide users with a one-page application where they can view their own résumé and add jobs and skills as needed.
+[View pull request](../../pull/2).
+[Download release](https://github.com/codeunion/linkedout-example/archive/v0.4.0.zip).
 
-The _releases after 1.0.0 are for more advanced work_. If you are up for the challenge, go for it!
+- [X] A user can view a résumé show page
+- [X] Résumé show page displays user profile info, skills, and jobs
+- [X] User can edit user profile
+- [X] User can edit jobs
+- [X] User can edit skills
 
-### Release 0.9.0: Create new skills asynchronously
+### v[0.6.0]
 
-Requirements:
+[View pull request](../../pull/3).
+[Download release](https://github.com/codeunion/linkedout-example/archive/v0.6.0.zip).
 
-- [ ] A user may add skills directly on their résumé show page
-- [ ] Adding skills does not require a page refresh (i.e. must be AJAX)
-- [ ] Added skills immediately show on the page in the appropriate spot
+- [X] Site looks not-so-terrible
+- [X] HTML is modularized with sections and partials
 
-Resources:
+### v[0.8.0]
 
-- Anatomy of a jQuery POST request [TODO: Needs writeup in wiki]
+[View pull request](../../pull/4).
+[Download release](https://github.com/codeunion/linkedout-example/archive/v0.8.0.zip).
+
+- [X] User can add skills directly from the résumé show page
+- [X] User can add jobs directly from the résumé show page
+
+### v[1.0.0]
+
+[View pull request](../../pull/5).
+[Download release](https://github.com/codeunion/linkedout-example/archive/v1.0.0.zip).
+
+- [X] A user may add skills directly on their résumé show page
+- [X] Adding skills does not require a page refresh (i.e. must be AJAX)
+- [X] Added skills immediately show on the page in the appropriate spot
+- [X] A user may add jobs directly to their résumé show page, including the job title, description, and company name
+- [X] Adding jobs does not require a page refresh (i.e. must be AJAX)
+- [X] Added jobs immediately show on the page in the appropriate spot
+
+This is the first release with JavaScript and jQuery included. As a reference, here are some of the resources used to accomplish the features in this release:
+
 - Sending POST requests with AJAX: [API documentation for the `jQuery.post()` function][jquery-api-post] (make sure to read some of the examples)
 - Adding content to the DOM with jQuery: [Documentation for jQuery's `.append()` function][jquery-api-append]
-
-- Using a partial as response data
-
-### Release 1.0.0: Create jobs asynchronously
-
-Requirements:
-
-- [ ] A user may add jobs directly to their résumé show page, including the job _title_, _description_, and _company name_
-- [ ] Adding jobs does not require a page refresh (i.e. must be AJAX)
-- [ ] Added jobs immediately show on the page in the appropriate spot
-
-Resources:
-
-- Sending form data in an AJAX request [TODO: Needs writeup in wiki]
 - Reading and serializing data from a form in jQuery: [jQuery's `.serialize()` function][jquery-api-serialize]
 
 ### Release 1.1.0: Improve the CSS
@@ -115,19 +119,9 @@ Requirements:
 - [ ] A user can search for other users by a specific skill
 - [ ] Clicking on a skill links to a page listing all users with that skill at a URL like `/skills/web-development`
 
-## Finishing Up
-
-## Learning Goals
-
-The purpose of this project is develop a richer understanding of how web applications can manipulate data using asynchronous requests. Through the process of building a site that allows users to read data from and write data to a server, we will learn about synchronous vs. asynchronous requests and use JavaScript to improve the UX (User Experience) of a site through improved client-side behavior.
-
-By the end of the project, we will:
-
-- Be able to use jQuery to send asynchronous requests, listen for a response, and update the DOM
-- Be able to use request data to create new records in a database
-- Understand how JavaScript can be used to manipulate the DOM
-
 [sqlite3-install]:https://github.com/codeunion/fundamentals-of-web-development/wiki/Resources-and-Tools#sqlite
 [jquery-api-post]:http://api.jquery.com/jquery.post/
 [jquery-api-append]:http://api.jquery.com/append/
 [jquery-api-serialize]:http://api.jquery.com/serialize/
+[gh-help-releases]:https://help.github.com/articles/about-releases/
+[gh-help-pull-requests]:https://help.github.com/articles/using-pull-requests/
