@@ -89,32 +89,45 @@ This is the first release with JavaScript and jQuery included. As a reference, h
 - Adding content to the DOM with jQuery: [Documentation for jQuery's `.append()` function][jquery-api-append]
 - Reading and serializing data from a form in jQuery: [jQuery's `.serialize()` function][jquery-api-serialize]
 
-### Release 1.1.0: Improve the CSS
+### v[1.2.0] Asynchronously edit and delete jobs
 
-_Everything from this release forward is optional: continue at your own risk/pleasure._
+- [ ] User can edit jobs on the résumé show page
+- [ ] User can delete jobs on the résumé show page
+- [ ] Editing and deleting jobs occurs asynchronously
+- [ ] Edited jobs are updated on the page
+- [ ] Deleted jobs are removed from the page
 
-This website is not so good-looking. Make it more good-looking with CSS. You'll need to know a little bit about the [fundamentals of User Interface design](http://blog.teamtreehouse.com/10-user-interface-design-fundamentals).
+### v[1.4.0] Asynchronously edit and delete skills
 
-### Release 1.2.0: Edit and delete skills and jobs
+- [ ] User can edit skills on the résumé show page
+- [ ] User can delete skills on the résumé show page
+- [ ] Editing and deleting skills occurs asynchronously
+- [ ] Edited skills are updated on the page
+- [ ] Deleted skills are removed from the page
 
-Requirements:
+### v[1.5.0] Display education information
 
-- [ ] A user can edit skills from the résumé show page
-- [ ] A user can edit jobs from the résumé show page
-- [ ] A user can delete skills from the résumé show page
-- [ ] A user can delete jobs from the résumé show page
-- [ ] All editing and deleting of skills and jobs does not require a page refresh
+- [ ] Users can have many schools
+- [ ] Schools belong to a user
+- [ ] Schools have a name, graduation year, and subjects
+- [ ] Résumé show page displays a user's schools
 
-### Release 1.3.0: Support multiple users
+### v[1.8.0] Full asynchronous CRUD for schools
 
-Requirements:
+- [ ] User can add schools on the résumé show page
+- [ ] User can edit schools on the résumé show page
+- [ ] User can delete schools on the résumé show page
+- [ ] Creating, editing and deleting schools occurs asynchronously
+- [ ] Added schools immediately show on the page in the appropriate spot
+- [ ] Edited schools are updated on the page
+- [ ] Deleted schools are removed from the page
 
-- [ ] Multiple users can create their own résumés
-- [ ] Resumes can be viewed at [friendly URLs](http://en.wikipedia.org/wiki/Semantic_URL), e.g. `/resumes/jane-smith`
+### v[1.9.0] Improve the UI
 
-### Release 1.4.0: Filter by skill
+- [ ] Page has pretty colors and fonts
+- [ ] Design follows [fundamentals of User Interface design](http://blog.teamtreehouse.com/10-user-interface-design-fundamentals)
 
-Requirements:
+### v[2.0.0] Filter by skill
 
 - [ ] A user can search for other users by a specific skill
 - [ ] Clicking on a skill links to a page listing all users with that skill at a URL like `/skills/web-development`
