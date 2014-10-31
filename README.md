@@ -32,11 +32,16 @@ Once you have SQLite3 working, you can set up your development environment with 
 ├── linkedout.rb # the most important file! this is the heart of our Sinatra web app, where we define how to respond to requests from across the web
 ├── models.rb # where we define the data models for the app, using an ORM like DataMapper
 ├── public # a folder to hold "static assets" like CSS files, images, and JavaScript files
-│   ├── main.css # our custom CSS
-│   └── normalize.css # a commonly used CSS library to aid in cross-browser compatibility
+│   ├── css # folder to hold CSS files
+│   │   ├── main.css # our custom CSS
+│   │   └── normalize.css # a commonly used CSS library to aid in cross-browser compatibility
+│   └── js # folder to hold JavaScript script files
+│       └── main.js # our main JavaScript script file, all the JS stuff goes here
 └── views # a folder to hold the HTML templates for our pages
     ├── layout.erb # this is the main template for our site
+    ├── partials # a folder containing a bunch of partials (not listed, because there are a bunch of them)
     └── resumes # a sub-folder, to hold specific templates related to résumés
+        └── edit.erb # the template for the résumé show page
         └── show.erb # the template for the résumé show page
 ```
 
