@@ -49,7 +49,7 @@ _Note: there are other, smaller [releases][gh-help-releases] within this reposit
 [View pull request](../../pull/2).
 [Download release](https://github.com/codeunion/linkedout-example/archive/v0.4.0.zip).
 
-- [X] A user can view a résumé show page
+- [X] User can view a résumé show page
 - [X] Résumé show page displays user profile info, skills, and jobs
 - [X] User can edit user profile
 - [X] User can edit jobs
@@ -76,11 +76,11 @@ _Note: there are other, smaller [releases][gh-help-releases] within this reposit
 [View pull request](../../pull/5).
 [Download release](https://github.com/codeunion/linkedout-example/archive/v1.0.0.zip).
 
-- [X] A user may add skills directly on their résumé show page
-- [X] Adding skills does not require a page refresh (i.e. must be AJAX)
+- [X] User may add skills directly on their résumé show page
+- [X] Adding skills does not require a page refresh
 - [X] Added skills immediately show on the page in the appropriate spot
-- [X] A user may add jobs directly to their résumé show page, including the job title, description, and company name
-- [X] Adding jobs does not require a page refresh (i.e. must be AJAX)
+- [X] User may add jobs directly to their résumé show page, including the job title, description, and company name
+- [X] Adding jobs does not require a page refresh
 - [X] Added jobs immediately show on the page in the appropriate spot
 
 This is the first release with JavaScript and jQuery included. As a reference, here are some of the resources used to accomplish the features in this release:
@@ -94,33 +94,33 @@ This is the first release with JavaScript and jQuery included. As a reference, h
 - [ ] User can edit jobs on the résumé show page
 - [ ] User can delete jobs on the résumé show page
 - [ ] Editing and deleting jobs occurs asynchronously
-- [ ] Edited jobs are updated on the page
-- [ ] Deleted jobs are removed from the page
+- [ ] Edited jobs are updated on the page without refresh
+- [ ] Deleted jobs are removed from the page without refresh
 
 ### v[1.4.0] Asynchronously edit and delete skills
 
 - [ ] User can edit skills on the résumé show page
 - [ ] User can delete skills on the résumé show page
 - [ ] Editing and deleting skills occurs asynchronously
-- [ ] Edited skills are updated on the page
-- [ ] Deleted skills are removed from the page
+- [ ] Edited skills are updated on the page without refresh
+- [ ] Deleted skills are removed from the page without refresh
 
 ### v[1.5.0] Display education information
 
-- [ ] Users can have many schools
+- [ ] Résumé show page displays a users education history
+- [ ] User can have many schools
 - [ ] Schools belong to a user
-- [ ] Schools have a name, graduation year, and subjects
-- [ ] Résumé show page displays a user's schools
+- [ ] Schools have a name, graduation year, and subjects studied
 
 ### v[1.8.0] Full asynchronous CRUD for schools
 
 - [ ] User can add schools on the résumé show page
 - [ ] User can edit schools on the résumé show page
 - [ ] User can delete schools on the résumé show page
-- [ ] Creating, editing and deleting schools occurs asynchronously
-- [ ] Added schools immediately show on the page in the appropriate spot
-- [ ] Edited schools are updated on the page
-- [ ] Deleted schools are removed from the page
+- [ ] Creating, editing, and deleting schools occurs asynchronously
+- [ ] Added schools show on the page in the appropriate spot without refresh
+- [ ] Edited schools are updated on the page without refresh
+- [ ] Deleted schools are removed from the page without refresh
 
 ### v[1.9.0] Improve the UI
 
@@ -129,7 +129,7 @@ This is the first release with JavaScript and jQuery included. As a reference, h
 
 ### v[2.0.0] Filter by skill
 
-- [ ] A user can search for other users by a specific skill
+- [ ] User can search for other users by a specific skill
 - [ ] Clicking on a skill links to a page listing all users with that skill at a URL like `/skills/web-development`
 
 [sqlite3-install]:https://github.com/codeunion/fundamentals-of-web-development/wiki/Resources-and-Tools#sqlite
