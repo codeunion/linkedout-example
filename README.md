@@ -44,7 +44,7 @@ Once you have SQLite3 working, you can set up your development environment with 
 
 _Note: there are other, smaller [releases][gh-help-releases] within this repository. The releases listed here correspond to significant changes to the application's features. Each of the releases here is represented by a corresponding [pull request][gh-help-pull-requests]._
 
-### v[0.4.0]
+### v[0.4.0] Users can edit content of résumé
 
 [View pull request](../../pull/2).
 [Download release](https://github.com/codeunion/linkedout-example/archive/v0.4.0.zip).
@@ -55,7 +55,7 @@ _Note: there are other, smaller [releases][gh-help-releases] within this reposit
 - [X] User can edit jobs
 - [X] User can edit skills
 
-### v[0.6.0]
+### v[0.6.0] Improvements to styles and markup
 
 [View pull request](../../pull/3).
 [Download release](https://github.com/codeunion/linkedout-example/archive/v0.6.0.zip).
@@ -63,7 +63,7 @@ _Note: there are other, smaller [releases][gh-help-releases] within this reposit
 - [X] Site looks not-so-terrible
 - [X] HTML is modularized with sections and partials
 
-### v[0.8.0]
+### v[0.8.0] User can add skills and jobs
 
 [View pull request](../../pull/4).
 [Download release](https://github.com/codeunion/linkedout-example/archive/v0.8.0.zip).
@@ -71,7 +71,7 @@ _Note: there are other, smaller [releases][gh-help-releases] within this reposit
 - [X] User can add skills directly from the résumé show page
 - [X] User can add jobs directly from the résumé show page
 
-### v[1.0.0]
+### v[1.0.0] Skills and jobs created asynchronously
 
 [View pull request](../../pull/5).
 [Download release](https://github.com/codeunion/linkedout-example/archive/v1.0.0.zip).
