@@ -1,4 +1,7 @@
 var createNewSkillsOnSubmit = function() {
+  // What's this with the dollar sign in the variable?
+  // It doesn't change how the variable works, it is just an
+  // indicator to say "this variable contains a jQuery object"
   var $newSkillForm = getNewSkillForm();
 
   // Bind to the "submit" event of the new skill form
