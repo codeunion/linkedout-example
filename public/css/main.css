@@ -113,6 +113,11 @@ form.mini input[type="submit"] { float: right; }
   padding-left: 1em;
 }
 
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
 
 /*
  * SECTION STYLING

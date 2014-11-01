@@ -22,6 +22,18 @@ var insertNewJobIntoDOM = function(newJobHTML) {
   $newJobForm.get(0).reset();
 };
 
+var showJobEditFormOnClick = function() {
+  $('.js_edit_job').click(function(evt) {
+    evt.preventDefault();
+
+    var $jobListItem = $(this).parent('li');
+    var $jobEditForm = $jobListItem.next('li');
+
+    $jobListItem.addClass('hidden');
+    $jobEditForm.removeClass('hidden');
+  });
+};
+
 var deleteJobOnSubmit = function() {
   var $deleteJobForm = $('form[name="delete_job"]');
 
@@ -48,5 +60,8 @@ var deleteJobOnSubmit = function() {
 
 $(document).ready(function() {
   createNewJobsOnSubmit();
+
+  showJobEditFormOnClick();
+
   deleteJobOnSubmit();
 });
