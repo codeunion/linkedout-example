@@ -1,4 +1,4 @@
-<li>
+<div class="job">
   <form name="delete_job" action="/jobs" method="post" accept-charset="utf-8" class="float_right">
     <input type="hidden" name="_method" value="delete">
     <input type="hidden" name="job[id]" value="<%= job.id %>">
@@ -7,4 +7,4 @@
   <a href="/resumes/edit" title="Edit job" class="js_edit_job float_right">Edit</a>
   <h4><%= job.job_title %> at <%= job.company_name %></h4>
   <p><%= job.job_description %></p>
-</li>
+</div>

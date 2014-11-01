@@ -26,10 +26,10 @@ var showJobEditFormOnClick = function() {
   $('.jobs').on('click', '.js_edit_job', function(evt) {
     evt.preventDefault();
 
-    var $jobListItem = $(this).parent('li');
-    var $jobEditForm = $jobListItem.next('li');
+    var $jobElem = $(this).parent('.job');
+    var $jobEditForm = $jobElem.siblings('form[name="edit_job"]');
 
-    $jobListItem.addClass('hidden');
+    $jobElem.addClass('hidden');
     $jobEditForm.removeClass('hidden');
   });
 };
@@ -42,10 +42,10 @@ var updateJobOnSubmit = function() {
 
     var jobFormData = $(this).serialize();
 
-    var $jobEditForm = $(this).parent('li');
-    // The job item to update is the previous <li> element
-    // before the current <li> containing the form
-    var $jobListItem = $jobEditForm.prev('li');
+    var $jobEditForm = $(this);
+    // The job item to update is the the element of class
+    // 'job' in the same containing element (in this case, <li>)
+    var $jobListItem = $jobEditForm.siblings('.job');
 
     // Send async PUT request to /jobs/edit
     $.ajax({
@@ -57,7 +57,7 @@ var updateJobOnSubmit = function() {
       // back from the server
       //
       // We expect to receive the updated job HTML
-      // (as a <li> element with job info inside)
+      // (as a <div> element with job info inside)
       var newJobHTML = responseData;
 
       $jobListItem.removeClass('hidden');
@@ -76,9 +76,9 @@ var deleteJobOnSubmit = function() {
 
     var jobFormData = $(this).serialize();
 
-    // Grab the parent <li> element so that we can remove
+    // Grab the containing <li> element so that we can remove
     // it when the delete request completes
-    var $parentLiElement = $(this).parent('li');
+    var $parentLiElement = $(this).closest('li');
 
     // Sending a DELETE request requires using the jQuery
     // .ajax() function and configuring the url, type,

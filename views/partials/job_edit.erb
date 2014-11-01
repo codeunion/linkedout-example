@@ -1,21 +1,19 @@
 <% if hidden %>
-<li class="hidden">
+<form class="hidden" name="edit_job" action="/jobs/edit" method="post" accept-charset="utf-8">
 <% else %>
-<li>
+<form name="edit_job" action="/jobs/edit" method="post" accept-charset="utf-8">
 <% end %>
-  <form name="edit_job" action="/jobs/edit" method="post" accept-charset="utf-8">
-    <input type="hidden" name="_method" value="put">
+  <input type="hidden" name="_method" value="put">
 
-    <input type="hidden" name="job[id]" value="<%= job.id %>">
+  <input type="hidden" name="job[id]" value="<%= job.id %>">
 
-    <input type="text" name="job[job_title]" value="<%= job.job_title %>"> at
-    <input type="text" name="job[company_name]" value="<%= job.company_name %>">
-    <br>
+  <input type="text" name="job[job_title]" value="<%= job.job_title %>"> at
+  <input type="text" name="job[company_name]" value="<%= job.company_name %>">
+  <br>
 
-    <label for="job[job_description]">Job Description</label><br>
-    <textarea name="job[job_description]"><%= job.job_description %></textarea>
-    <br>
+  <label for="job[job_description]">Job Description</label><br>
+  <textarea name="job[job_description]"><%= job.job_description %></textarea>
+  <br>
 
-    <input type="submit" value="Save">
-  </form>
-</li>
+  <input type="submit" value="Save">
+</form>

@@ -11,11 +11,15 @@
       <h2>Jobs</h2>
       <ul class="no_bullets no_padding">
         <% @jobs.each do |job| %>
-          <%= partial :'partials/job', :locals => { :job => job } %>
-          <%= partial :'partials/job_edit', :locals => { :job => job, :hidden => true } %>
+          <li>
+            <%= partial :'partials/job', :locals => { :job => job } %>
+            <%= partial :'partials/job_edit', :locals => { :job => job, :hidden => true } %>
+          <li>
         <% end %>
 
-        <%= partial :'partials/job_new' %>
+        <li>
+          <%= partial :'partials/job_new' %>
+        </li>
       </ul>
     </section>
 
