@@ -73,7 +73,11 @@ delete "/jobs" do
   job = Job.get(job_id)
   job.destroy
 
-  redirect "/"
+  if request.xhr?
+    job_id
+  else
+    redirect "/"
+  end
 end
 
 post "/skills" do
