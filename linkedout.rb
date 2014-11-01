@@ -48,7 +48,11 @@ post "/jobs" do
   job.save
 
   if request.xhr?
-    partial :'partials/job', :locals => { :job => job }
+    html =  "<li>"
+    html += partial :'partials/job', :locals => { :job => job }
+    html += partial :'partials/job_edit', :locals => { :job => job, :hidden => true }
+    html += "</li>"
+    html
   else
     redirect "/"
   end
