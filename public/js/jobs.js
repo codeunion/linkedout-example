@@ -1,7 +1,5 @@
 var createNewJobsOnSubmit = function() {
-  var $newJobForm = getNewJobForm();
-
-  $newJobForm.submit(function (evt) {
+  $('.jobs').on('submit', 'form[name="new_job"]',function(evt) {
     evt.preventDefault();
 
     var jobFormData = $(this).serialize();
@@ -35,9 +33,7 @@ var showJobEditFormOnClick = function() {
 };
 
 var updateJobOnSubmit = function() {
-  var $editJobForm = $('form[name="edit_job"]');
-
-  $editJobForm.submit(function(evt) {
+  $('.jobs').on('submit', 'form[name="edit_job"]', function(evt) {
     evt.preventDefault();
 
     var jobFormData = $(this).serialize();
@@ -69,9 +65,7 @@ var updateJobOnSubmit = function() {
 };
 
 var deleteJobOnSubmit = function() {
-  var $deleteJobForm = $('form[name="delete_job"]');
-
-  $deleteJobForm.submit(function (evt) {
+  $('.jobs').on('submit', 'form[name="delete_job"]', function(evt) {
     evt.preventDefault();
 
     var jobFormData = $(this).serialize();
