@@ -36,7 +36,8 @@ Once you have SQLite3 working, you can set up your development environment with 
 │   │   ├── main.css # our custom CSS
 │   │   └── normalize.css # a commonly used CSS library to aid in cross-browser compatibility
 │   └── js # folder to hold JavaScript script files
-│       └── main.js # our main JavaScript script file, all the JS stuff goes here
+│       └── jobs.js # script to manage behavior relating to job resources
+│       └── skills.js # script to manage behavior relating to skills resources
 └── views # a folder to hold the HTML templates for our pages
     ├── layout.erb # this is the main template for our site
     ├── partials # a folder containing a bunch of partials (not listed, because there are a bunch of them)
