@@ -10,9 +10,16 @@
     <section class="jobs two_thirds">
       <h2>Jobs</h2>
       <ul class="no_bullets no_padding">
-        <%= partial :'partials/job', collection: @jobs %>
+        <% @jobs.each do |job| %>
+          <li>
+            <%= partial :'partials/job', :locals => { :job => job } %>
+            <%= partial :'partials/job_edit', :locals => { :job => job, :hidden => true } %>
+          <li>
+        <% end %>
 
-        <%= partial :'partials/job_new' %>
+        <li>
+          <%= partial :'partials/job_new' %>
+        </li>
       </ul>
     </section>
 

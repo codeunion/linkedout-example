@@ -47,35 +47,8 @@ var insertNewSkillIntoDOM = function(newSkillHTML) {
   $newSkillForm.get(0).reset();
 };
 
-
-var createNewJobsOnSubmit = function() {
-  var $newJobForm = getNewJobForm();
-
-  $newJobForm.submit(function (evt) {
-    evt.preventDefault();
-
-    var jobFormData = $(this).serialize();
-
-    $.post("/jobs", jobFormData, insertNewJobIntoDOM);
-  });
-};
-
-var getNewJobForm = function() {
-  return $('form[name="new_job"]');
-};
-
-var insertNewJobIntoDOM = function(newJobHTML) {
-  var $newJobForm = getNewJobForm();
-
-  $newJobForm.parent('li').before(newJobHTML);
-
-  $newJobForm.get(0).reset();
-};
-
-
 // Wait to execute all code until the document is ready
 // (i.e. all of the DOM nodes have been loaded)
 $(document).ready(function() {
   createNewSkillsOnSubmit();
-  createNewJobsOnSubmit();
 });

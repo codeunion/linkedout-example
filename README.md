@@ -36,7 +36,8 @@ Once you have SQLite3 working, you can set up your development environment with 
 │   │   ├── main.css # our custom CSS
 │   │   └── normalize.css # a commonly used CSS library to aid in cross-browser compatibility
 │   └── js # folder to hold JavaScript script files
-│       └── main.js # our main JavaScript script file, all the JS stuff goes here
+│       └── jobs.js # script to manage behavior relating to job resources
+│       └── skills.js # script to manage behavior relating to skills resources
 └── views # a folder to hold the HTML templates for our pages
     ├── layout.erb # this is the main template for our site
     ├── partials # a folder containing a bunch of partials (not listed, because there are a bunch of them)
@@ -96,11 +97,12 @@ This is the first release with JavaScript and jQuery included. As a reference, h
 
 ### v[1.2.0] Asynchronously edit and delete jobs
 
-- [ ] User can edit jobs on the résumé show page
-- [ ] User can delete jobs on the résumé show page
-- [ ] Editing and deleting jobs occurs asynchronously
-- [ ] Edited jobs are updated on the page without refresh
-- [ ] Deleted jobs are removed from the page without refresh
+- [X] User can edit jobs on the résumé show page
+- [X] User can delete jobs on the résumé show page
+- [X] Editing jobs occurs asynchronously
+- [X] Deleting jobs occurs asynchronously
+- [X] Edited jobs are updated on the page without refresh
+- [X] Deleted jobs are removed from the page without refresh
 
 ### v[1.4.0] Asynchronously edit and delete skills
 

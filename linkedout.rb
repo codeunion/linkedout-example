@@ -48,7 +48,11 @@ post "/jobs" do
   job.save
 
   if request.xhr?
-    partial :'partials/job', :locals => { :job => job }
+    html =  "<li>"
+    html += partial :'partials/job', :locals => { :job => job }
+    html += partial :'partials/job_edit', :locals => { :job => job, :hidden => true }
+    html += "</li>"
+    html
   else
     redirect "/"
   end
@@ -62,7 +66,26 @@ put "/jobs/edit" do
   job = Job.get(job_id)
   job.update(job_attrs)
 
-  redirect "/"
+  if request.xhr?
+    partial :'partials/job', :locals => { :job => job }
+  else
+    redirect "/"
+  end
+end
+
+delete "/jobs" do
+  job_attrs = params[:job]
+
+  job_id = job_attrs.delete("id")
+
+  job = Job.get(job_id)
+  job.destroy
+
+  if request.xhr?
+    job_id
+  else
+    redirect "/"
+  end
 end
 
 post "/skills" do
