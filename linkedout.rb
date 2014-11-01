@@ -62,7 +62,11 @@ put "/jobs/edit" do
   job = Job.get(job_id)
   job.update(job_attrs)
 
-  redirect "/"
+  if request.xhr?
+    partial :'partials/job', :locals => { :job => job }
+  else
+    redirect "/"
+  end
 end
 
 delete "/jobs" do

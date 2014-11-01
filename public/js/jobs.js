@@ -23,7 +23,7 @@ var insertNewJobIntoDOM = function(newJobHTML) {
 };
 
 var showJobEditFormOnClick = function() {
-  $('.js_edit_job').click(function(evt) {
+  $('.jobs').on('click', '.js_edit_job', function(evt) {
     evt.preventDefault();
 
     var $jobListItem = $(this).parent('li');
@@ -31,6 +31,40 @@ var showJobEditFormOnClick = function() {
 
     $jobListItem.addClass('hidden');
     $jobEditForm.removeClass('hidden');
+  });
+};
+
+var updateJobOnSubmit = function() {
+  var $editJobForm = $('form[name="edit_job"]');
+
+  $editJobForm.submit(function(evt) {
+    evt.preventDefault();
+
+    var jobFormData = $(this).serialize();
+
+    var $jobEditForm = $(this).parent('li');
+    // The job item to update is the previous <li> element
+    // before the current <li> containing the form
+    var $jobListItem = $jobEditForm.prev('li');
+
+    // Send async PUT request to /jobs/edit
+    $.ajax({
+      url: '/jobs/edit',
+      type: 'PUT',
+      data: jobFormData
+    }).done(function(responseData) {
+      // This function will execute when the response comes
+      // back from the server
+      //
+      // We expect to receive the updated job HTML
+      // (as a <li> element with job info inside)
+      var newJobHTML = responseData;
+
+      $jobListItem.removeClass('hidden');
+      $jobEditForm.addClass('hidden');
+
+      $jobListItem.replaceWith(newJobHTML);
+    });
   });
 };
 
@@ -62,6 +96,7 @@ $(document).ready(function() {
   createNewJobsOnSubmit();
 
   showJobEditFormOnClick();
+  updateJobOnSubmit();
 
   deleteJobOnSubmit();
 });
