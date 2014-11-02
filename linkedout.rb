@@ -25,11 +25,8 @@ get "/" do
   erb :'resumes/show'
 end
 
-get "/resumes/edit" do
-  @jobs = default_user.jobs
-  @skills = default_user.skills
-
-  erb :'resumes/edit'
+get "/users/edit" do
+  erb :'users/edit'
 end
 
 put "/users" do
@@ -101,16 +98,6 @@ post "/skills" do
   else
     redirect "/"
   end
-end
-
-put "/skills/:skill_id" do
-  skill_id = params[:skill_id]
-  skill_attrs = params[:skill]
-
-  skill = Skill.get(skill_id)
-  skill.update(skill_attrs)
-
-  redirect "/"
 end
 
 delete "/skills/:skill_id" do
