@@ -97,6 +97,9 @@ This is the first release with JavaScript and jQuery included. As a reference, h
 
 ### v[1.2.0] Asynchronously edit and delete jobs
 
+[View pull request](../../pull/6).
+[Download release](https://github.com/codeunion/linkedout-example/archive/v1.2.0.zip).
+
 - [X] User can edit jobs on the résumé show page
 - [X] User can delete jobs on the résumé show page
 - [X] Editing jobs occurs asynchronously
