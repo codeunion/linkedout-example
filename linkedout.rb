@@ -94,7 +94,10 @@ post "/skills" do
   skill.save
 
   if request.xhr? # this will return true when handling an AJAX request
-    partial :'partials/skill', :locals => { :skill => skill }
+    html =  "<li>"
+    html += partial :'partials/skill', :locals => { :skill => skill }
+    html += "</li>"
+    html
   else
     redirect "/"
   end
