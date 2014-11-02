@@ -107,13 +107,17 @@ This is the first release with JavaScript and jQuery included. As a reference, h
 - [X] Edited jobs are updated on the page without refresh
 - [X] Deleted jobs are removed from the page without refresh
 
-### v[1.4.0] Asynchronously edit and delete skills
+### v[1.3.0] Asynchronously delete skills
 
-- [ ] User can edit skills on the résumé show page
-- [ ] User can delete skills on the résumé show page
-- [ ] Editing and deleting skills occurs asynchronously
-- [ ] Edited skills are updated on the page without refresh
-- [ ] Deleted skills are removed from the page without refresh
+- [X] User can delete skills on the résumé show page
+- [X] Deleting skills occurs asynchronously
+- [X] Deleted skills are removed from the page without refresh
+
+This release also makes improvements to the underlying architecture of the application, including the following changes:
+
+- [X] Use RESTful routing conventions
+- [X] Logging in `skills.js`
+- [X] Format of HTML and JavaScript more consistent
 
 ### v[1.5.0] Display education information
 
