@@ -110,6 +110,9 @@ This is the first release with JavaScript and jQuery included. As a reference, h
 
 ### v[1.3.0] Asynchronously delete skills
 
+[View pull request](../../pull/7).
+[Download release](https://github.com/codeunion/linkedout-example/archive/v1.3.0.zip).
+
 - [X] User can delete skills on the résumé show page
 - [X] Deleting skills occurs asynchronously
 - [X] Deleted skills are removed from the page without refresh
