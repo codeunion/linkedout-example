@@ -32,7 +32,7 @@ get "/resumes/edit" do
   erb :'resumes/edit'
 end
 
-put "/users/edit" do
+put "/users" do
   user_attrs = params[:user]
 
   default_user.update(user_attrs)
@@ -58,10 +58,9 @@ post "/jobs" do
   end
 end
 
-put "/jobs/edit" do
+put "/jobs/:job_id" do
+  job_id = params[:job_id]
   job_attrs = params[:job]
-
-  job_id = job_attrs.delete("id")
 
   job = Job.get(job_id)
   job.update(job_attrs)
@@ -73,10 +72,9 @@ put "/jobs/edit" do
   end
 end
 
-delete "/jobs" do
+delete "/jobs/:job_id" do
+  job_id = params[:job_id]
   job_attrs = params[:job]
-
-  job_id = job_attrs.delete("id")
 
   job = Job.get(job_id)
   job.destroy
@@ -102,10 +100,9 @@ post "/skills" do
   end
 end
 
-put "/skills/edit" do
+put "/skills/:skill_id" do
+  skill_id = params[:skill_id]
   skill_attrs = params[:skill]
-
-  skill_id = skill_attrs.delete("id")
 
   skill = Skill.get(skill_id)
   skill.update(skill_attrs)
