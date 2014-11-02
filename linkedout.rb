@@ -25,14 +25,11 @@ get "/" do
   erb :'resumes/show'
 end
 
-get "/resumes/edit" do
-  @jobs = default_user.jobs
-  @skills = default_user.skills
-
-  erb :'resumes/edit'
+get "/users/edit" do
+  erb :'users/edit'
 end
 
-put "/users/edit" do
+put "/users" do
   user_attrs = params[:user]
 
   default_user.update(user_attrs)
@@ -58,10 +55,9 @@ post "/jobs" do
   end
 end
 
-put "/jobs/edit" do
+put "/jobs/:job_id" do
+  job_id = params[:job_id]
   job_attrs = params[:job]
-
-  job_id = job_attrs.delete("id")
 
   job = Job.get(job_id)
   job.update(job_attrs)
@@ -73,10 +69,9 @@ put "/jobs/edit" do
   end
 end
 
-delete "/jobs" do
+delete "/jobs/:job_id" do
+  job_id = params[:job_id]
   job_attrs = params[:job]
-
-  job_id = job_attrs.delete("id")
 
   job = Job.get(job_id)
   job.destroy
@@ -96,19 +91,25 @@ post "/skills" do
   skill.save
 
   if request.xhr? # this will return true when handling an AJAX request
-    partial :'partials/skill', :locals => { :skill => skill }
+    html =  "<li>"
+    html += partial :'partials/skill', :locals => { :skill => skill }
+    html += "</li>"
+    html
   else
     redirect "/"
   end
 end
 
-put "/skills/edit" do
+delete "/skills/:skill_id" do
+  skill_id = params[:skill_id]
   skill_attrs = params[:skill]
 
-  skill_id = skill_attrs.delete("id")
-
   skill = Skill.get(skill_id)
-  skill.update(skill_attrs)
+  skill.destroy
 
-  redirect "/"
+  if request.xhr?
+    skill_id
+  else
+    redirect "/"
+  end
 end

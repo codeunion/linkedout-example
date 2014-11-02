@@ -11,12 +11,16 @@ var createJobOnSubmit = function() {
     evt.preventDefault();
 
     var $newJobForm = $(this);
+
+    // Use the destination path defined in the form's 'action'
+    // attribute, i.e. `/jobs`
+    var actionPath = $newJobForm.attr('action');
     var newJobFormData = $(this).serialize();
 
-    log("Sending POST request to /jobs");
+    log("Sending POST request to " + actionPath);
 
-    $.post("/jobs", newJobFormData, function(jobHTML) {
-      log("Received response from POST request to /jobs");
+    $.post(actionPath, newJobFormData, function(jobHTML) {
+      log("Received response from POST request to " + actionPath);
 
       log("Adding new job element to list");
       $newJobForm.parent('li').before(jobHTML);
@@ -48,21 +52,25 @@ var updateJobOnSubmit = function() {
     evt.preventDefault();
 
     var $editJobForm = $(this);
+
+    // Use the destination path defined in the form's 'action'
+    // attribute, i.e. `/jobs/:job_id`
+    var actionPath = $editJobForm.attr('action');
     var editJobFormData = $editJobForm.serialize();
 
     // The job item to update is the the element of class
     // 'job' in the same containing element (in this case, <li>)
     var $jobElem = $editJobForm.siblings('.job');
 
-    log("Sending PUT request to /jobs/edit");
+    log("Sending PUT request to " + actionPath);
 
-    // Send async PUT request to /jobs/edit
+    // Send async PUT request to /jobs/:job_id
     $.ajax({
-      url: '/jobs/edit',
+      url: actionPath,
       type: 'PUT',
       data: editJobFormData
     }).done(function(responseData) {
-      log("Received response from PUT request to /jobs/edit");
+      log("Received response from PUT request to " + actionPath);
       // This function will execute when the response comes
       // back from the server
       //
@@ -87,23 +95,27 @@ var deleteJobOnSubmit = function() {
     evt.preventDefault();
 
     var $deleteJobForm = $(this);
+
+    // Use the destination path defined in the form's 'action'
+    // attribute, i.e. `/jobs/:job_id`
+    var actionPath = $deleteJobForm.attr('action');
     var deleteJobFormData = $deleteJobForm.serialize();
 
     // Grab the containing <li> element so that we can remove
     // it when the delete request completes
     var $jobContainerElem = $(this).closest('li');
 
-    log("Sending DELETE request to /jobs");
+    log("Sending DELETE request to " + actionPath);
 
     // Sending a DELETE request requires using the jQuery
     // .ajax() function and configuring the url, type,
     // data, and complete options
     $.ajax({
-      url: '/jobs',
+      url: actionPath,
       type: 'DELETE',
       data: deleteJobFormData
     }).done(function() {
-      log("Received response from DELETE request to /jobs");
+      log("Received response from DELETE request to " + actionPath);
 
       log("Removing deleted job element");
       $jobContainerElem.remove();

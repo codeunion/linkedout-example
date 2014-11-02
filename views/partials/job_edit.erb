@@ -1,11 +1,9 @@
 <% if hidden %>
-<form class="hidden" name="edit_job" action="/jobs/edit" method="post" accept-charset="utf-8">
+<form class="hidden" name="edit_job" action="/jobs/<%= job.id %>" method="post" accept-charset="utf-8">
 <% else %>
-<form name="edit_job" action="/jobs/edit" method="post" accept-charset="utf-8">
+<form name="edit_job" action="/jobs/<%= job.id %>" method="post" accept-charset="utf-8">
 <% end %>
   <input type="hidden" name="_method" value="put">
-
-  <input type="hidden" name="job[id]" value="<%= job.id %>">
 
   <input type="text" name="job[job_title]" value="<%= job.job_title %>"> at
   <input type="text" name="job[company_name]" value="<%= job.company_name %>">
