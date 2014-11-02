@@ -112,3 +112,17 @@ put "/skills/:skill_id" do
 
   redirect "/"
 end
+
+delete "/skills/:skill_id" do
+  skill_id = params[:skill_id]
+  skill_attrs = params[:skill]
+
+  skill = Skill.get(skill_id)
+  skill.destroy
+
+  if request.xhr?
+    skill_id
+  else
+    redirect "/"
+  end
+end

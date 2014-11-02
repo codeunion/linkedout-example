@@ -47,8 +47,46 @@ var insertNewSkillIntoDOM = function(newSkillHTML) {
   $newSkillForm.get(0).reset();
 };
 
+var deleteSkillOnSubmit = function() {
+  $('.skills').on('submit', 'form[name="delete_skill"]', function(evt) {
+    log("Edit skill form submitted");
+
+    evt.preventDefault();
+
+    var $deleteSkillForm = $(this);
+
+    // Use the destination path defined in the form's 'action'
+    // attribute, i.e. `/skills/:skill_id`
+    var actionPath = $deleteSkillForm.attr('action');
+    var deleteSkillFormData = $deleteSkillForm.serialize();
+
+    // Grab the containing <li> element so that we can remove
+    // it when the delete request completes
+    var $skillContainerElem = $(this).closest('li');
+
+    log("Sending DELETE request to " + actionPath);
+
+    // Sending a DELETE request requires using the jQuery
+    // .ajax() function and configuring the url, type,
+    // data, and complete options
+    $.ajax({
+      url: actionPath,
+      type: 'DELETE',
+      data: deleteSkillFormData
+    }).done(function() {
+      log("Received response from DELETE request to " + actionPath);
+
+      log("Removing deleted skill element");
+      $skillContainerElem.remove();
+    });
+  });
+};
+
+
 // Wait to execute all code until the document is ready
 // (i.e. all of the DOM nodes have been loaded)
 $(document).ready(function() {
   createNewSkillsOnSubmit();
+
+  deleteSkillOnSubmit();
 });
