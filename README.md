@@ -42,8 +42,9 @@ Once you have SQLite3 working, you can set up your development environment with 
     ├── layout.erb # this is the main template for our site
     ├── partials # a folder containing a bunch of partials (not listed, because there are a bunch of them)
     └── resumes # a sub-folder, to hold specific templates related to résumés
-        └── edit.erb # the template for the résumé show page
         └── show.erb # the template for the résumé show page
+    └── users # a sub-folder, to hold specific templates related to users
+        └── edit.erb # the template for the user edit page
 ```
 
 ## Releases
