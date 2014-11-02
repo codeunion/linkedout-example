@@ -115,9 +115,11 @@ This is the first release with JavaScript and jQuery included. As a reference, h
 
 This release also makes improvements to the underlying architecture of the application, including the following changes:
 
-- [X] Use RESTful routing conventions
+- [X] Use [RESTful routing](http://en.wikipedia.org/wiki/Representational_state_transfer#Applied_to_web_services) conventions
 - [X] Logging in `skills.js`
 - [X] Format of HTML and JavaScript more consistent
+
+In addition, the `/resumes/edit` page has been changed to `/users/edit` and now contains only a form to edit the user profile. This change removes redundancy in editing other resources.
 
 ### v[1.5.0] Display education information
 
