@@ -29,7 +29,7 @@ get "/users/edit" do
   erb :'users/edit'
 end
 
-put "/users" do
+put "/users/edit" do
   user_attrs = params[:user]
 
   default_user.update(user_attrs)
