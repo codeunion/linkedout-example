@@ -2,6 +2,8 @@ var createNewSkillsOnSubmit = function() {
   // Bind to the "submit" event of the new skill form using
   // event delegation
   $('.skills').on('submit', 'form[name="new_skill"]', function(evt) {
+    log("New skill form submitted");
+
     // Prevent the submit from sending an HTTP POST request
     // Instead, we'll handle the request with AJAX
     evt.preventDefault();
@@ -22,6 +24,7 @@ var createNewSkillsOnSubmit = function() {
     // standard URL-encoded notation
     var newSkillFormData = $newSkillForm.serialize();
 
+    log("Sending POST request to " + actionPath);
     // Send a POST request asynchronously to the "/skills"
     // route on the server, passing the serialized form data
     // in the request body.
@@ -36,10 +39,14 @@ var createNewSkillsOnSubmit = function() {
     // this case is a snippet of HTML representing the newly-
     // created skill.
     $.post(actionPath, newSkillFormData, function(newSkillHTML) {
+      log("Received response from POST request to " + actionPath);
+
+      log("Adding new skill element to list");
       // Add the new skill to the list, just before the form's
       // parent 'li' element
       $newSkillForm.parent('li').before(newSkillHTML);
 
+      log("Resetting new skill form")
       // Reset the form so that new skills can be added
       $newSkillForm.get(0).reset();
     });
