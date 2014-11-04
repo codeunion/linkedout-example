@@ -8,7 +8,7 @@ You'll need SQLite3 to complete this project. If you haven't installed it alread
 
 Once you have SQLite3 working, you can set up your development environment with the following steps:
 
-1. Fork and clone this repository
+1. Fork, clone and run this repository
 - Install the dependent gems: `bundle install --without production`
 - Create a `.env` file from the default `cp .env.example .env`
 - Seed the database with `bundle exec rake db:seed`
