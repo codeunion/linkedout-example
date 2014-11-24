@@ -4,6 +4,10 @@ var log = function(message) {
   console.log('[' + timestamp + ']  ' + message);
 };
 
+var hideJobEditForms = function() {
+  $('form[name="edit_job"]').addClass("hidden");
+}
+
 var createJobOnSubmit = function() {
   $('.jobs').on('submit', 'form[name="new_job"]', function(evt) {
     log("New job form submitted");
@@ -124,6 +128,8 @@ var deleteJobOnSubmit = function() {
 };
 
 $(document).ready(function() {
+  hideJobEditForms();
+
   createJobOnSubmit();
 
   showEditJobFormOnClick();

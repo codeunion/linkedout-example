@@ -47,7 +47,7 @@ post "/jobs" do
   if request.xhr?
     html =  "<li>"
     html += partial :'partials/job', :locals => { :job => job }
-    html += partial :'partials/job_edit', :locals => { :job => job, :hidden => true }
+    html += partial :'partials/job_edit', :locals => { :job => job }
     html += "</li>"
     html
   else

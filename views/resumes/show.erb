@@ -13,7 +13,7 @@
         <% @jobs.each do |job| %>
           <li>
             <%= partial :'partials/job', :locals => { :job => job } %>
-            <%= partial :'partials/job_edit', :locals => { :job => job, :hidden => true } %>
+            <%= partial :'partials/job_edit', :locals => { :job => job } %>
           <li>
         <% end %>
 
