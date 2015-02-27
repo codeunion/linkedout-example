@@ -133,3 +133,7 @@ form.mini input[type="submit"] { float: right; }
   margin-bottom: 1em;
   background-color: #ccc;
 }
+
+/* Schools section */
+.schools li { margin-bottom: 2.5em; }
+.schools li h4 { margin-bottom: 0; }

@@ -1,0 +1,9 @@
+<div class="school">
+  <form name="delete_school" action="/schools/<%= school.id %>" method="post" accept-charset="utf-8" class="float_right">
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" value="Delete">
+  </form>
+  <a href="#" title="Edit School" class="js_edit_school float_right">Edit</a>
+  <h4><%= school.name %>, <%= school.grad_year %></h4>
+  <p><%= school.studies %></p>
+</div>

@@ -21,6 +21,7 @@ end
 get "/" do
   @jobs = default_user.jobs
   @skills = default_user.skills
+  @schools = default_user.schools
 
   erb :'resumes/show'
 end

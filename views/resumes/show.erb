@@ -38,4 +38,21 @@
       </ul>
     </section>
   </div>
+
+  <div class="row">
+    <section class="schools two_thirds">
+      <h2>Education</h2>
+      <ul class="no_bullets no_padding">
+        <% @schools.each do |school| %>
+          <li>
+            <%= partial :'partials/school', :locals => { :school => school } %>
+          </li>
+        <% end %>
+
+        <li>
+
+        </li>Form goes here
+      </ul>
+    </section>
+  </div>
 </div>
