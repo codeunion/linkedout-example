@@ -135,7 +135,7 @@ In addition, the `/resumes/edit` page has been changed to `/users/edit` and now 
 ### v[1.8.0] Full asynchronous CRUD for schools
 
 - [x] User can add schools on the résumé show page
-- [ ] User can edit schools on the résumé show page
+- [x] User can edit schools on the résumé show page
 - [x] User can delete schools on the résumé show page
 - [ ] Creating, editing, and deleting schools occurs asynchronously
 - [ ] Added schools show on the page in the appropriate spot without refresh
