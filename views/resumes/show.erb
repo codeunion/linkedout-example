@@ -14,7 +14,7 @@
           <li>
             <%= partial :'partials/job', :locals => { :job => job } %>
             <%= partial :'partials/job_edit', :locals => { :job => job } %>
-          <li>
+          </li>
         <% end %>
 
         <li>
@@ -46,6 +46,7 @@
         <% @schools.each do |school| %>
           <li>
             <%= partial :'partials/school', :locals => { :school => school } %>
+            <%= partial :'partials/school_edit', :locals => { :school => school } %>
           </li>
         <% end %>
 

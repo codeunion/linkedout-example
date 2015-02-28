@@ -1,0 +1,13 @@
+<form name="edit_school" action="/schools/<%= school.id %>" method="post" accept-charset="utf-8">
+  <input type="hidden" name="_method" value="put">
+
+  <input type="text" name="school[name]" value="<%= school.name %>"> at
+  <input type="text" name="school[grad_year]" value="<%= school.grad_year %>">
+  <br>
+
+  <label for="school[studies]">Area(s) of Study</label><br>
+  <textarea name="school[studies]"><%= school.studies %></textarea>
+  <br>
+
+  <input type="submit" value="Save">
+</form>

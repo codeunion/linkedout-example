@@ -135,6 +135,20 @@ post "/schools" do
   redirect "/"
 end
 
+put '/schools/:school_id' do
+  school_id = params[:school_id]
+  school_attrs = params[:school]
+
+  school = School.get(school_id)
+  school.update(school_attrs)
+
+  if request.xhr?
+    partial :'partials/school', :locals => { :school => school }
+  else
+    redirect "/"
+  end
+end
+
 delete "/schools/:school_id" do
   school_id = params[:school_id]
 
