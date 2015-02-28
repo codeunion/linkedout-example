@@ -127,16 +127,16 @@ In addition, the `/resumes/edit` page has been changed to `/users/edit` and now 
 
 ### v[1.5.0] Display education information
 
-- [ ] Résumé show page displays a users education history
-- [ ] User can have many schools
-- [ ] Schools belong to a user
-- [ ] Schools have a name, graduation year, and subjects studied
+- [x] Résumé show page displays a users education history
+- [x] User can have many schools
+- [x] Schools belong to a user
+- [x] Schools have a name, graduation year, and subjects studied
 
 ### v[1.8.0] Full asynchronous CRUD for schools
 
-- [ ] User can add schools on the résumé show page
+- [x] User can add schools on the résumé show page
 - [ ] User can edit schools on the résumé show page
-- [ ] User can delete schools on the résumé show page
+- [x] User can delete schools on the résumé show page
 - [ ] Creating, editing, and deleting schools occurs asynchronously
 - [ ] Added schools show on the page in the appropriate spot without refresh
 - [ ] Edited schools are updated on the page without refresh
