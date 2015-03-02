@@ -71,7 +71,6 @@ end
 
 delete "/jobs/:job_id" do
   job_id = params[:job_id]
-  job_attrs = params[:job]
 
   job = Job.get(job_id)
   job.destroy
@@ -102,7 +101,6 @@ end
 
 delete "/skills/:skill_id" do
   skill_id = params[:skill_id]
-  skill_attrs = params[:skill]
 
   skill = Skill.get(skill_id)
   skill.destroy
