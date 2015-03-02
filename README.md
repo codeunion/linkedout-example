@@ -137,10 +137,10 @@ In addition, the `/resumes/edit` page has been changed to `/users/edit` and now 
 - [x] User can add schools on the résumé show page
 - [x] User can edit schools on the résumé show page
 - [x] User can delete schools on the résumé show page
-- [ ] Creating, editing, and deleting schools occurs asynchronously
-- [ ] Added schools show on the page in the appropriate spot without refresh
-- [ ] Edited schools are updated on the page without refresh
-- [ ] Deleted schools are removed from the page without refresh
+- [x] Creating, editing, and deleting schools occurs asynchronously
+- [x] Added schools show on the page in the appropriate spot without refresh
+- [x] Edited schools are updated on the page without refresh
+- [x] Deleted schools are removed from the page without refresh
 
 ### v[1.9.0] Improve the UI
 

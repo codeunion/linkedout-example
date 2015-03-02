@@ -131,8 +131,6 @@ post "/schools" do
   else
     redirect "/"
   end
-
-  redirect "/"
 end
 
 put '/schools/:school_id' do

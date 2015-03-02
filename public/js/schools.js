@@ -23,7 +23,7 @@ var createSchoolOnSubmit = function() {
 
     log("Sending POST request to " + actionPath);
 
-    $.post(actionPath, newschoolFormData, function(schoolHTML) {
+    $.post(actionPath, newSchoolFormData, function(schoolHTML) {
       log("Received response from POST request to " + actionPath);
 
       log("Adding new school element to list");
@@ -98,7 +98,7 @@ var deleteSchoolOnSubmit = function() {
 
     evt.preventDefault();
 
-    var $deleteEditForm = $(this);
+    var $deleteSchoolForm = $(this);
 
     // Use the destination path defined in the form's 'action'
     // attribute, i.e. `/schools/:school_id`
