@@ -21,6 +21,7 @@ end
 get "/" do
   @jobs = default_user.jobs
   @skills = default_user.skills
+  @schools = default_user.schools
 
   erb :'resumes/show'
 end
@@ -71,7 +72,7 @@ end
 
 delete "/jobs/:job_id" do
   job_id = params[:job_id]
-  job_attrs = params[:job]
+  job_attrs = params[:job] # is this line doing anything?
 
   job = Job.get(job_id)
   job.destroy
@@ -102,13 +103,58 @@ end
 
 delete "/skills/:skill_id" do
   skill_id = params[:skill_id]
-  skill_attrs = params[:skill]
+  skill_attrs = params[:skill] # is this line doing anything?
 
   skill = Skill.get(skill_id)
   skill.destroy
 
   if request.xhr?
     skill_id
+  else
+    redirect "/"
+  end
+end
+
+post "/schools" do
+  school_attrs = params[:school]
+  school_attrs.merge!({ :user => default_user })
+
+  school = School.new(school_attrs)
+  school.save
+
+  if request.xhr?
+    html =  "<li>"
+    html += partial :'partials/school', :locals => { :school => school }
+    html += partial :'partials/school_edit', :locals => { :school => school }
+    html += "</li>"
+    html
+  else
+    redirect "/"
+  end
+end
+
+put '/schools/:school_id' do
+  school_id = params[:school_id]
+  school_attrs = params[:school]
+
+  school = School.get(school_id)
+  school.update(school_attrs)
+
+  if request.xhr?
+    partial :'partials/school', :locals => { :school => school }
+  else
+    redirect "/"
+  end
+end
+
+delete "/schools/:school_id" do
+  school_id = params[:school_id]
+
+  school = School.get(school_id)
+  school.destroy
+
+  if request.xhr?
+    school_id
   else
     redirect "/"
   end

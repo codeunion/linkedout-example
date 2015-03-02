@@ -16,6 +16,7 @@ class User
 
   has n, :jobs, { :child_key => [:user_id] }
   has n, :skills, { :child_key => [:user_id] }
+  has n, :schools, { :child_key => [:user_id] }
 end
 
 class Job
@@ -34,6 +35,17 @@ class Skill
 
   property :id, Serial
   property :name, String, { :required => true }
+
+  belongs_to :user
+end
+
+class School
+  include DataMapper::Resource
+
+  property :id, Serial
+  property :name, String, { required: true }
+  property :grad_year, String, { required: true }
+  property :studies, Text
 
   belongs_to :user
 end

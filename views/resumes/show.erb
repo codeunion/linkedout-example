@@ -14,7 +14,7 @@
           <li>
             <%= partial :'partials/job', :locals => { :job => job } %>
             <%= partial :'partials/job_edit', :locals => { :job => job } %>
-          <li>
+          </li>
         <% end %>
 
         <li>
@@ -34,6 +34,24 @@
 
         <li>
           <%= partial :'partials/skill_new' %>
+        </li>
+      </ul>
+    </section>
+  </div>
+
+  <div class="row">
+    <section class="schools two_thirds">
+      <h2>Education</h2>
+      <ul class="no_bullets no_padding">
+        <% @schools.each do |school| %>
+          <li>
+            <%= partial :'partials/school', :locals => { :school => school } %>
+            <%= partial :'partials/school_edit', :locals => { :school => school } %>
+          </li>
+        <% end %>
+
+        <li>
+          <%= partial :'partials/school_new' %>
         </li>
       </ul>
     </section>

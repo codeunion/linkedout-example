@@ -20,9 +20,21 @@ task 'db:seed' do
   # Create a random number of skills
   skills = Array.new(rand(10)) { Skill.create({ :name => Faker::Hacker.ingverb }) }
 
-  # Associate the jobs and skills with the user
+  # Create 2 schools
+  school_one = School.create({ :name => 'CSU Sacramento',
+                               :grad_year => '2006',
+                               :studies => 'English Education' })
+
+  school_two = School.create({ :name => 'CSU Dominguez Hills',
+                               :grad_year => '2015',
+                               :studies => 'Humanities, Philosophy'})
+
+
+  # Associate the jobs, skills, and schools with the user
   jobs.each { |job| user.jobs << job }
   skills.each { |skill| user.skills << skill }
+  user.schools << school_one
+  user.schools << school_two
 
   # Save the user and all associations
   user.save
